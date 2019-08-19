@@ -25,7 +25,15 @@ public class Livro {
 	public void gerarCodigo() {
 		
 	}
-	
+
+	public int getQuantidade() {
+		return quantidade;
+	}
+
+	public void setQuantidade(int quantidade) {
+		this.quantidade = quantidade;
+	}
+
 	public boolean isDisponivel() {
 		return this.disponivel;
 	}
