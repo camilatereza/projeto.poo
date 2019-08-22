@@ -1,7 +1,7 @@
 package ufpb.poo.livraria;
 
 public class Livro {
-	
+
 	private String codigo;
 	private int ano;
 	private int genero;
@@ -21,9 +21,9 @@ public class Livro {
 		this.disponivel = true;
 		this.quantidade = quantidade;
 	}
-	
+
 	public void gerarCodigo() {
-		
+
 	}
 
 	public int getQuantidade() {
@@ -35,7 +35,11 @@ public class Livro {
 	}
 
 	public boolean isDisponivel() {
-		return this.disponivel;
+		return disponivel;
+	}
+
+	public void setDisponivel(boolean disponivel) {
+		this.disponivel = disponivel;
 	}
 
 	public String getCodigo() {

@@ -1,13 +1,15 @@
 package ufpb.poo.livraria;
 
+import java.util.ArrayList;
+
 public class Usuario extends Pessoa {
 
-	private Livro livroLocado;
+	private ArrayList<Livro> livroLocado;
 	private String tempoLocado;
 	private String contato;
 	private Endereco end;
 
-	public Usuario(String nome, String cpf, long senha, Livro locado, String duracao, String conta, Endereco ende) {
+	public Usuario(String nome, String cpf, long senha, ArrayList<Livro> locado, String duracao, String conta, Endereco ende) {
 		super(nome, cpf, senha);
 		this.livroLocado = locado;
 		this.tempoLocado = duracao;
@@ -15,12 +17,12 @@ public class Usuario extends Pessoa {
 		this.end = ende;
 	}
 
-	public Livro getLivroLocado() {
+	public ArrayList<Livro> getLivroLocado() {
 		return livroLocado;
 	}
 
 	public void setLivroLocado(Livro livroLocado) {
-		this.livroLocado = livroLocado;
+		this.livroLocado.add(livroLocado);
 	}
 
 	public String getTempoLocado() {
