@@ -59,15 +59,15 @@ public class Livro {
 				+ titulo + ", autor=" + autor + ", disponivel=" + disponivel + ", quantidade=" + quantidade + "]";
 	}
 
-	public String gerarCodigo(int gen, int idioma, int ano) {
+	public String gerarCodigo(int gen, int idioma, int anoo) {
 
 		Random random = new Random();
 		String cod = null;
 		String genero = Integer.toString(gen);
 		String lingua = Integer.toString(idioma);
-		String anoo = Integer.toString(ano);
+		String ano = Integer.toString(anoo);
 		String dif = String.valueOf(random.nextInt(10000));
-		cod = genero + lingua + anoo + "."+ dif;
+		cod = genero + lingua + ano + "."+ dif;
 
 		return cod;
 	}
