@@ -1,4 +1,4 @@
-package ufpb.poo.livraria;
+package ufpb.poo.biblioteca;
 
 import java.util.ArrayList;
 
@@ -6,9 +6,9 @@ public interface Library {
 
 	public void cadastrarFuncionario(Funcionario fun);
 
-	public ArrayList<Livro> listarArcevo();
+	public ArrayList<String> listarArcevo();
 
-	public boolean verificarLogin();
+	public boolean verificarLogin(Funcionario funcionario);
 
 	public void efetuarEmprestimo(Livro book, Usuario cliente);
 
@@ -29,4 +29,5 @@ public interface Library {
 	public boolean excluirUsuario(Usuario Cliente);
 
 	public Livro buscaLivro(Livro book);
+
 }

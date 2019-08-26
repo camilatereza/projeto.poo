@@ -1,4 +1,4 @@
-package ufpb.poo.livraria;
+package ufpb.poo.biblioteca;
 
 public enum Genero {
 	GENERALIDADES, FILOSOFIA, RELIGIAO, SOCIAIS, LINGUAGEM, CIENCIAS, TECNOLOGIA, ARTE,

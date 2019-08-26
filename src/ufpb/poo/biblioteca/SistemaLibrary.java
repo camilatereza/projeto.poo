@@ -1,9 +1,9 @@
-package ufpb.poo.livraria;
+package ufpb.poo.biblioteca;
 
 import java.util.ArrayList;
 
 public class SistemaLibrary implements Library {
-
+	
 	ArrayList<Livro> listaLivro;
 	ArrayList<Funcionario> listaFuncionario;
 	ArrayList<Usuario> listaUsuario;
@@ -27,12 +27,13 @@ public class SistemaLibrary implements Library {
 	}
 
 	public Livro buscaLivro(Livro book) {
+		Livro livro = null;
 		for (Livro l : listaLivro) {
 			if (l.getCodigo().equals(book.getCodigo())) {
-				return l;
+				livro = l;
 			}
 		}
-		return null;
+		return livro;
 	}
 
 	public boolean excluirLivro(Livro book) {
@@ -47,12 +48,13 @@ public class SistemaLibrary implements Library {
 	}
 
 	public Usuario consultarUsuario(Usuario cliente) {
+		Usuario usuario = null;
 		for (Usuario u : listaUsuario) {
 			if (u.getCpf().equals(cliente.getCpf())) {
-				return u;
+				usuario = u;
 			}
 		}
-		return null;
+		return usuario;
 	}
 
 	public void cadastrarUsuario(Usuario cliente) {
@@ -80,13 +82,25 @@ public class SistemaLibrary implements Library {
 	}
 
 	@Override
-	public ArrayList<Livro> listarArcevo() {
-		return this.listaLivro;
+	public ArrayList<String> listarArcevo() {
+		ArrayList<String> livros = new ArrayList<String>();
+		for (Livro l : this.listaLivro) {
+			livros.add(l.getTitulo());
+			livros.add(":");
+			livros.add(l.getAutor());
+		}
+		return livros;
 	}
 
 	@Override
-	public boolean verificarLogin() {
-		return false;
+	public boolean verificarLogin(Funcionario funcionario){
+		boolean logado = false;
+		for (Funcionario f : this.listaFuncionario) {
+			if (f.equals(funcionario)) {
+				logado = true;
+			}
+		}
+		return logado;
 	}
 
 	public ArrayList<Usuario> buscaUsu(String nome) {
@@ -100,11 +114,12 @@ public class SistemaLibrary implements Library {
 	}
 
 	public Usuario buscaCpf(String cpf) {
+		Usuario usuario = null;
 		for (Usuario c : listaUsuario) {
 			if (c.getCpf().equals(cpf)) {
-				return c;
+				usuario = c;
 			}
 		}
-		return null;
+		return usuario;
 	}
 }

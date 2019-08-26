@@ -1,4 +1,7 @@
-package ufpb.poo.livraria;
+package ufpb.poo.biblioteca;
+
+import java.math.MathContext;
+import java.util.Random;
 
 public class Livro {
 
@@ -22,8 +25,52 @@ public class Livro {
 		this.quantidade = quantidade;
 	}
 
-	public void gerarCodigo() {
+	public Livro() {
+		super();
+	}
 
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + ((codigo == null) ? 0 : codigo.hashCode());
+		return result;
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Livro other = (Livro) obj;
+		if (codigo == null) {
+			if (other.codigo != null)
+				return false;
+		} else if (!codigo.equals(other.codigo))
+			return false;
+		return true;
+	}
+
+	@Override
+	public String toString() {
+		return "Livro [codigo=" + codigo + ", ano=" + ano + ", genero=" + genero + ", idioma=" + idioma + ", titulo="
+				+ titulo + ", autor=" + autor + ", disponivel=" + disponivel + ", quantidade=" + quantidade + "]";
+	}
+
+	public String gerarCodigo(int gen, int idioma, int ano) {
+
+		Random random = new Random();
+		String cod = null;
+		String genero = Integer.toString(gen);
+		String lingua = Integer.toString(idioma);
+		String anoo = Integer.toString(ano);
+		String dif = String.valueOf(random.nextInt(10000));
+		cod = genero + lingua + anoo + "."+ dif;
+
+		return cod;
 	}
 
 	public int getQuantidade() {

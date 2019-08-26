@@ -1,4 +1,4 @@
-package ufpb.poo.livraria;
+package ufpb.poo.biblioteca;
 
 public enum Idioma {
 	AMERICANA_CANADENSE, INGLESA, ALEMA, FRANCESA, ITALIANA_ROMENA, ESPANHOL, PORTUGUESA,

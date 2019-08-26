@@ -1,4 +1,4 @@
-package ufpb.poo.livraria;
+package ufpb.poo.biblioteca;
 
 import java.util.ArrayList;
 
