@@ -23,7 +23,7 @@ public class Livro {
 	}
 
 	public void gerarCodigo() {
-
+		 
 	}
 
 	public int getQuantidade() {
