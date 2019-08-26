@@ -25,6 +25,7 @@ public class Livro {
 		this.quantidade = quantidade;
 	}
 
+<<<<<<< HEAD:src/ufpb/poo/biblioteca/Livro.java
 	public Livro() {
 		super();
 	}
@@ -71,6 +72,10 @@ public class Livro {
 		cod = genero + lingua + anoo + "."+ dif;
 
 		return cod;
+=======
+	public void gerarCodigo() {
+		 
+>>>>>>> 8a35df89005dd106665aaebf6ddf70f99cd879f8:src/ufpb/poo/livraria/Livro.java
 	}
 
 	public int getQuantidade() {
