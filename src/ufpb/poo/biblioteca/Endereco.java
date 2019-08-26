@@ -1,4 +1,4 @@
-package ufpb.poo.livraria;
+package ufpb.poo.biblioteca;
 
 public class Endereco {
 
